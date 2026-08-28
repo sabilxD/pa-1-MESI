@@ -15,6 +15,7 @@ LDFLAGS  :=
 
 BIN          := bin
 MAIN         := src/main.cpp
+DEBUG		 := src/debug.cpp
 STUDENT_SRC  := src/matmul_naive.cpp src/matmul_simd.cpp src/matmul_prefetch.cpp \
                 src/matmul_optimized.cpp
 
@@ -22,7 +23,7 @@ STUDENT_SRC  := src/matmul_naive.cpp src/matmul_simd.cpp src/matmul_prefetch.cpp
 SOLUTION_SRC := src/matmul_naive.cpp solution/matmul_simd.cpp solution/matmul_prefetch.cpp \
                 solution/matmul_optimized.cpp
 
-.PHONY: all run solution clean llama-demo
+.PHONY: all run solution clean llama-demo debug
 
 all: $(BIN)/matmul
 
@@ -32,6 +33,10 @@ $(BIN)/matmul: $(STUDENT_SRC) $(MAIN) | $(BIN)
 
 run: $(BIN)/matmul
 	./$(BIN)/matmul
+
+debug: $(BIN)/debug
+$(BIN)/debug: $(STUDENT_SRC) $(DEBUG) | $(BIN)
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 # Instructor build against solution/ (kept out of the student handout).
 solution: $(BIN)/matmul_solution
