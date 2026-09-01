@@ -5,9 +5,16 @@
 #include <iostream>
 
 static inline float horizontal_sum(__m256 v) {
-    float temp[8];
-    _mm256_storeu_ps(temp, v);
-    return temp[0] + temp[1] + temp[2] + temp[3] + temp[4] + temp[5] + temp[6] + temp[7];
+    __m128 lo = _mm256_castps256_ps128(v);
+    __m128 hi = _mm256_extractf128_ps(v, 1);
+    __m128 sum128 = _mm_add_ps(lo, hi);
+    
+    __m128 shuf = _mm_movehdup_ps(sum128); 
+    __m128 sums = _mm_add_ps(sum128, shuf);
+    shuf = _mm_movehl_ps(shuf, sums);
+    sums = _mm_add_ss(sums, shuf);
+    
+    return _mm_cvtss_f32(sums);
 }
 
 void matmul_simd(const float* A, const float* B, float* C,
@@ -32,20 +39,131 @@ void matmul_simd(const float* A, const float* B, float* C,
             __m256 acc32 = _mm256_setzero_ps();
             
             int p=0;
-            for (; p+7<K; p+=8) {
-                acc00 = _mm256_fmadd_ps(_mm256_loadu_ps(a[0] + p), _mm256_loadu_ps(b[0] + p), acc00);
-                acc10 = _mm256_fmadd_ps(_mm256_loadu_ps(a[1] + p), _mm256_loadu_ps(b[0] + p), acc10);
-                acc20 = _mm256_fmadd_ps(_mm256_loadu_ps(a[2] + p), _mm256_loadu_ps(b[0] + p), acc20);
-                acc30 = _mm256_fmadd_ps(_mm256_loadu_ps(a[3] + p), _mm256_loadu_ps(b[0] + p), acc30);
-                acc01 = _mm256_fmadd_ps(_mm256_loadu_ps(a[0] + p), _mm256_loadu_ps(b[1] + p), acc01);
-                acc11 = _mm256_fmadd_ps(_mm256_loadu_ps(a[1] + p), _mm256_loadu_ps(b[1] + p), acc11);
-                acc21 = _mm256_fmadd_ps(_mm256_loadu_ps(a[2] + p), _mm256_loadu_ps(b[1] + p), acc21);
-                acc31 = _mm256_fmadd_ps(_mm256_loadu_ps(a[3] + p), _mm256_loadu_ps(b[1] + p), acc31);
-                acc02 = _mm256_fmadd_ps(_mm256_loadu_ps(a[0] + p), _mm256_loadu_ps(b[2] + p), acc02);
-                acc12 = _mm256_fmadd_ps(_mm256_loadu_ps(a[1] + p), _mm256_loadu_ps(b[2] + p), acc12);
-                acc22 = _mm256_fmadd_ps(_mm256_loadu_ps(a[2] + p), _mm256_loadu_ps(b[2] + p), acc22);
-                acc32 = _mm256_fmadd_ps(_mm256_loadu_ps(a[3] + p), _mm256_loadu_ps(b[2] + p), acc32);
+            for (; p+31<K; p+=32) {
+                
+                __m256 b0 = _mm256_loadu_ps(b[0] + p);
+                __m256 b1 = _mm256_loadu_ps(b[1] + p);
+                __m256 b2 = _mm256_loadu_ps(b[2] + p);
+
+                __m256 a_val = _mm256_loadu_ps(a[0] + p);
+                acc00 = _mm256_fmadd_ps(a_val, b0, acc00);
+                acc01 = _mm256_fmadd_ps(a_val, b1, acc01);
+                acc02 = _mm256_fmadd_ps(a_val, b2, acc02);
+
+                a_val = _mm256_loadu_ps(a[1] + p);
+                acc10 = _mm256_fmadd_ps(a_val, b0, acc10);
+                acc11 = _mm256_fmadd_ps(a_val, b1, acc11);
+                acc12 = _mm256_fmadd_ps(a_val, b2, acc12);
+
+                a_val = _mm256_loadu_ps(a[2] + p);
+                acc20 = _mm256_fmadd_ps(a_val, b0, acc20);
+                acc21 = _mm256_fmadd_ps(a_val, b1, acc21);
+                acc22 = _mm256_fmadd_ps(a_val, b2, acc22);
+
+                a_val = _mm256_loadu_ps(a[3] + p);
+                acc30 = _mm256_fmadd_ps(a_val, b0, acc30);
+                acc31 = _mm256_fmadd_ps(a_val, b1, acc31);
+                acc32 = _mm256_fmadd_ps(a_val, b2, acc32);
+
+                b0 = _mm256_loadu_ps(b[0] + p + 8);
+                b1 = _mm256_loadu_ps(b[1] + p + 8);
+                b2 = _mm256_loadu_ps(b[2] + p + 8);
+
+                a_val = _mm256_loadu_ps(a[0] + p + 8);
+                acc00 = _mm256_fmadd_ps(a_val, b0, acc00);
+                acc01 = _mm256_fmadd_ps(a_val, b1, acc01);
+                acc02 = _mm256_fmadd_ps(a_val, b2, acc02);
+
+                a_val = _mm256_loadu_ps(a[1] + p + 8);
+                acc10 = _mm256_fmadd_ps(a_val, b0, acc10);
+                acc11 = _mm256_fmadd_ps(a_val, b1, acc11);
+                acc12 = _mm256_fmadd_ps(a_val, b2, acc12);
+
+                a_val = _mm256_loadu_ps(a[2] + p + 8);
+                acc20 = _mm256_fmadd_ps(a_val, b0, acc20);
+                acc21 = _mm256_fmadd_ps(a_val, b1, acc21);
+                acc22 = _mm256_fmadd_ps(a_val, b2, acc22);
+
+                a_val = _mm256_loadu_ps(a[3] + p + 8);
+                acc30 = _mm256_fmadd_ps(a_val, b0, acc30);
+                acc31 = _mm256_fmadd_ps(a_val, b1, acc31);
+                acc32 = _mm256_fmadd_ps(a_val, b2, acc32);
+
+                b0 = _mm256_loadu_ps(b[0] + p + 16);
+                b1 = _mm256_loadu_ps(b[1] + p + 16);
+                b2 = _mm256_loadu_ps(b[2] + p + 16);
+
+                a_val = _mm256_loadu_ps(a[0] + p + 16);
+                acc00 = _mm256_fmadd_ps(a_val, b0, acc00);
+                acc01 = _mm256_fmadd_ps(a_val, b1, acc01);
+                acc02 = _mm256_fmadd_ps(a_val, b2, acc02);
+
+                a_val = _mm256_loadu_ps(a[1] + p + 16);
+                acc10 = _mm256_fmadd_ps(a_val, b0, acc10);
+                acc11 = _mm256_fmadd_ps(a_val, b1, acc11);
+                acc12 = _mm256_fmadd_ps(a_val, b2, acc12);
+
+                a_val = _mm256_loadu_ps(a[2] + p + 16);
+                acc20 = _mm256_fmadd_ps(a_val, b0, acc20);
+                acc21 = _mm256_fmadd_ps(a_val, b1, acc21);
+                acc22 = _mm256_fmadd_ps(a_val, b2, acc22);
+
+                a_val = _mm256_loadu_ps(a[3] + p + 16);
+                acc30 = _mm256_fmadd_ps(a_val, b0, acc30);
+                acc31 = _mm256_fmadd_ps(a_val, b1, acc31);
+                acc32 = _mm256_fmadd_ps(a_val, b2, acc32);
+
+                b0 = _mm256_loadu_ps(b[0] + p + 24);
+                b1 = _mm256_loadu_ps(b[1] + p + 24);
+                b2 = _mm256_loadu_ps(b[2] + p + 24);
+
+                a_val = _mm256_loadu_ps(a[0] + p + 24);
+                acc00 = _mm256_fmadd_ps(a_val, b0, acc00);
+                acc01 = _mm256_fmadd_ps(a_val, b1, acc01);
+                acc02 = _mm256_fmadd_ps(a_val, b2, acc02);
+
+                a_val = _mm256_loadu_ps(a[1] + p + 24);
+                acc10 = _mm256_fmadd_ps(a_val, b0, acc10);
+                acc11 = _mm256_fmadd_ps(a_val, b1, acc11);
+                acc12 = _mm256_fmadd_ps(a_val, b2, acc12);
+
+                a_val = _mm256_loadu_ps(a[2] + p + 24);
+                acc20 = _mm256_fmadd_ps(a_val, b0, acc20);
+                acc21 = _mm256_fmadd_ps(a_val, b1, acc21);
+                acc22 = _mm256_fmadd_ps(a_val, b2, acc22);
+
+                a_val = _mm256_loadu_ps(a[3] + p + 24);
+                acc30 = _mm256_fmadd_ps(a_val, b0, acc30);
+                acc31 = _mm256_fmadd_ps(a_val, b1, acc31);
+                acc32 = _mm256_fmadd_ps(a_val, b2, acc32);
             }
+
+            for (; p + 7 < K; p += 8) {
+                __m256 b0 = _mm256_loadu_ps(b[0] + p);
+                __m256 b1 = _mm256_loadu_ps(b[1] + p);
+                __m256 b2 = _mm256_loadu_ps(b[2] + p);
+
+                __m256 a_val = _mm256_loadu_ps(a[0] + p);
+                acc00 = _mm256_fmadd_ps(a_val, b0, acc00);
+                acc01 = _mm256_fmadd_ps(a_val, b1, acc01);
+                acc02 = _mm256_fmadd_ps(a_val, b2, acc02);
+
+                a_val = _mm256_loadu_ps(a[1] + p);
+                acc10 = _mm256_fmadd_ps(a_val, b0, acc10);
+                acc11 = _mm256_fmadd_ps(a_val, b1, acc11);
+                acc12 = _mm256_fmadd_ps(a_val, b2, acc12);
+
+                a_val = _mm256_loadu_ps(a[2] + p);
+                acc20 = _mm256_fmadd_ps(a_val, b0, acc20);
+                acc21 = _mm256_fmadd_ps(a_val, b1, acc21);
+                acc22 = _mm256_fmadd_ps(a_val, b2, acc22);
+
+                a_val = _mm256_loadu_ps(a[3] + p);
+                acc30 = _mm256_fmadd_ps(a_val, b0, acc30);
+                acc31 = _mm256_fmadd_ps(a_val, b1, acc31);
+                acc32 = _mm256_fmadd_ps(a_val, b2, acc32);
+            }
+
 
             float c00 = horizontal_sum(acc00);
             float c01 = horizontal_sum(acc01);
@@ -96,11 +214,14 @@ void matmul_simd(const float* A, const float* B, float* C,
             const float* b = B + static_cast<long>(j) * ldb;
             for (int row = 0; row < 4; ++row) {
                 const float* a = A + static_cast<long>(i + row) * lda;
-                float acc = 0.0f;
-                for (int p = 0; p < K; ++p) {
-                    acc += a[p] * b[p];
+                __m256 acc = _mm256_setzero_ps();
+                int p=0;
+                for (; p+7 < K; p+=8) {
+                    acc = _mm256_fmadd_ps(_mm256_loadu_ps(a+p), _mm256_loadu_ps(b+p), acc);
                 }
-                C[static_cast<long>(i + row) * ldc + j] = acc;
+                float _acc = horizontal_sum(acc);
+                for (; p<K; p++) _acc += a[p]*b[p];
+                C[static_cast<long>(i + row) * ldc + j] = _acc;
             }
         }
     }
@@ -109,11 +230,14 @@ void matmul_simd(const float* A, const float* B, float* C,
         const float* a = A + static_cast<long>(i) * lda;
         for (int j = 0; j < N; ++j) {
             const float* b = B + static_cast<long>(j) * ldb;
-            float acc = 0.0f;
-            for (int p = 0; p < K; ++p) {
-                acc += a[p] * b[p];
+            __m256 acc = _mm256_setzero_ps();
+            int p=0;
+            for (; p+7 < K; p+=8) {
+                acc = _mm256_fmadd_ps(_mm256_loadu_ps(a+p), _mm256_loadu_ps(b+p), acc);
             }
-            C[static_cast<long>(i) * ldc + j] = acc;
+            float _acc = horizontal_sum(acc);
+            for (; p<K; p++) _acc += a[p]*b[p];
+            C[static_cast<long>(i) * ldc + j] = _acc;
         }
     }
 }
