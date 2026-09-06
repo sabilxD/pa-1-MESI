@@ -22,7 +22,7 @@ struct Stage {
 };
 
 static const Stage kStages[] = {
-    {"naive (ref)", "naive", matmul_naive, false},
+    {"naive (ref)", "naive", matmul_naive, true},
     {"simd", "simd", matmul_simd, true},
     {"prefetch", "prefetch", matmul_prefetch, true},
     {"optimized", "optimized", matmul_optimized, true},
