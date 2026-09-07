@@ -13,7 +13,7 @@ void matmul_prefetch(const float* A, const float* B, float* C,
             const float* b = B + static_cast<long>(j) * ldb;
             for (int p = 0; p < K; p += 16) {
 
-                if (p + PF_DIST < K) {
+                if (j * ldb + p + PF_DIST < N * K) {
                     _mm_prefetch(
                         reinterpret_cast<const char*>(b + p + PF_DIST),
                         _MM_HINT_T0
