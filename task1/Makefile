@@ -22,12 +22,17 @@ STUDENT_SRC  := src/conv_naive.cpp src/conv_reorder.cpp src/conv_unroll.cpp \
 SOLUTION_SRC := src/conv_naive.cpp solution/conv_reorder.cpp solution/conv_unroll.cpp \
                 solution/conv_tile.cpp solution/conv_simd.cpp solution/conv_optimized.cpp
 
+PERF_MAIN    := src/perf_main.cpp
+
 .PHONY: all run solution clean
 
-all: $(BIN)/conv
+all: $(BIN)/conv $(BIN)/perf_run
 
 # Student build: edit src/conv_*.cpp, then `make` and `./bin/conv`.
 $(BIN)/conv: $(STUDENT_SRC) $(MAIN) | $(BIN)
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
+
+$(BIN)/perf_run: $(STUDENT_SRC) $(PERF_MAIN) | $(BIN)
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(LDFLAGS)
 
 run: $(BIN)/conv

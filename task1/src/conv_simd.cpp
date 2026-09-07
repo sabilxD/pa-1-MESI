@@ -45,6 +45,8 @@ void conv_simd256(const float* in, float* out, const float* ker,
 
 void conv_simd(const float* in, float* out, const float* ker,
                int H, int W, int K) {
-    conv_simd128(in, out, ker, H, W, K);
-    // conv_simd256(in, out, ker, H, W, K);
+
+    // conv_simd128(in, out, ker, H, W, K);
+    conv_simd256(in, out, ker, H, W, K);
+    
 }
