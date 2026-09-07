@@ -5,7 +5,7 @@
 void matmul_prefetch(const float* A, const float* B, float* C,
                      int M, int N, int K, int lda, int ldb, int ldc) {
 
-    constexpr int PF_DIST = 256;
+    constexpr int PF_DIST = 1024;
     for (int i = 0; i < M; ++i) {
         const float* a = A + static_cast<long>(i) * lda;
         for (int j = 0; j < N; ++j) {
