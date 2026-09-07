@@ -15,7 +15,14 @@
 }
 
 \title{\textbf{CS683: Advanced Computer Architecture}\\\Large Programming Assignment 1: 2D Convolution - The Dhurandhar Way\\}
-\author{\textbf{Dheeraj Kumar} }
+\author{
+    \begin{tabular}{cc}
+        \textbf{Dheeraj Kumar Maradana} & \textbf{Sabil Ahmad} \\
+        Roll No: 23B0920 & Roll No: 23B1057 \\[1.5ex]
+        \textbf{Abhineet Majety} & \textbf{B Shashank} \\
+        Roll No: 23B0923 & Roll No: 23B1040
+    \end{tabular}
+}
 \date{\today}
 
 \begin{document}
@@ -1037,7 +1044,7 @@ $K$ & $N$ & Configuration & Time & Speedup &  Instructions & Cycles & IPC & L1-D
 21 & 4096 & \textbf{optimized} & 605.269 & \textbf{10.04$\times$} & 2711.08 & 1364.08 & 1.99 & 1.09\% & 4.79 \\
 \end{longtable}
 }
-
+\clearpage
 \begin{figure}[h!]
     \centering
     \begin{minipage}{0.48\textwidth}
@@ -1080,5 +1087,8 @@ $K$ & $N$ & Configuration & Time & Speedup &  Instructions & Cycles & IPC & L1-D
 %         \item Vertical Y-tiling ensures that active input rows remain resident in the 1.25\,MB L2 cache for large images ($N=4096$) while avoiding horizontal slicing ($TX=W$), preserving contiguous streaming and maintaining low L1-D MPKI ($< 4.8$) without halo reloads.
 %     \end{itemize}
 % \end{enumerate}
+
+\section{Github repo link}
+\href{https://github.com/sabilxD/pa-1-MESI}{here we go}
 
 \end{document}

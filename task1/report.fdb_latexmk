@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1788775304.65723 "/mnt/Acads/academics/7th-sem/CS 683/Assignments/pa-1-MESI/task1/report.tex" "report.pdf" "report" 1788775307.89517 0
+["pdflatex"] 1788778791.62019 "/mnt/Acads/academics/7th-sem/CS 683/Assignments/pa-1-MESI/task1/report.tex" "report.pdf" "report" 1788778797.53314 0
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -15,6 +15,7 @@
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1136768653 1328 5442e22a7072966dbaf88ca900acf3f0 ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1136768653 1528 abec98dbc43e172678c11b3b9031252a ""
+  "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm" 1136768653 1524 d89e2d087a9828407a196f428428ef4a ""
@@ -101,7 +102,7 @@
   "/home/me_dheerajkumar/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk" 1788734988.98452 12644 90d133329d64f2390b4904cfcaa5df75 ""
   "/home/me_dheerajkumar/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1788731054 2253830 63485266d1314046f6645aa9e9d1ea56 ""
   "/home/me_dheerajkumar/.TinyTeX/texmf.cnf" 1788730977.13396 637 edd806fb06a89761a6034e1968af9017 ""
-  "/mnt/Acads/academics/7th-sem/CS 683/Assignments/pa-1-MESI/task1/report.tex" 1788775301.01984 71359 2903707261a1cca386a4ccb8bbcbfc02 ""
+  "/mnt/Acads/academics/7th-sem/CS 683/Assignments/pa-1-MESI/task1/report.tex" 1788778785.51148 71695 5211cf32e6a2b0ae0b7d261afb01dd48 ""
   "figures/1a_instructions_reduction.png" 1788734939.61744 107821 406dd4840ca41e41d3d773a305a20720 ""
   "figures/1a_reorder_speedup_kernel.png" 1788767895.93629 138231 3a2f063dd0d09d1e2a10d70f3b1de92c ""
   "figures/1a_reorder_speedup_matrix.png" 1788767895.53778 144826 ac715643b533c60d0bf590ecba9202c4 ""
@@ -115,9 +116,9 @@
   "figures/1c_simd_speedup.png" 1788772496.03172 279246 56da5c4eb50b9fc394e5f823df264e7e ""
   "figures/1d_speedup_kernel_n2048.png" 1788775226.43135 180949 0993d0fa55d14d66490e1c74b3b89f44 ""
   "figures/1d_speedup_matrix_k3.png" 1788775226.13801 193329 913829a01b34d252be6c727af5ac0406 ""
-  "report.aux" 1788775307.85271 8699 9f5d5ff0eb4567d1fe7f18dbf078297a "pdflatex"
-  "report.out" 1788775307.85338 5474 1851a36a3f4891e8c45653edf851fefa "pdflatex"
-  "report.tex" 1788775301.01984 71359 2903707261a1cca386a4ccb8bbcbfc02 ""
+  "report.aux" 1788778797.43776 8813 362094f1339a7f69f8af0005faec00fe "pdflatex"
+  "report.out" 1788778797.4395 5604 62cfbe3204619caf110bc339f768914a "pdflatex"
+  "report.tex" 1788778785.51148 71695 5211cf32e6a2b0ae0b7d261afb01dd48 ""
   (generated)
   "report.aux"
   "report.log"

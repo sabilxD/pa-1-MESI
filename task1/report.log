@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.7)  7 SEP 2026 15:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.7)  7 SEP 2026 16:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -292,24 +292,24 @@ File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -351,52 +351,53 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/home/me_dheerajkumar/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 21.
+Package hyperref Info: Link coloring ON on input line 28.
  (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 34.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
  (/home/me_dheerajkumar/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
  (/home/me_dheerajkumar/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 41.
+ [1
 
 {/home/me_dheerajkumar/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<figures/1a_reorder_speedup_matrix.png, id=94, 505.89pt x 325.215pt>
+<figures/1a_reorder_speedup_matrix.png, id=98, 505.89pt x 325.215pt>
 File: figures/1a_reorder_speedup_matrix.png Graphic file (type png)
 <use figures/1a_reorder_speedup_matrix.png>
-Package pdftex.def Info: figures/1a_reorder_speedup_matrix.png  used on input line 155.
+Package pdftex.def Info: figures/1a_reorder_speedup_matrix.png  used on input line 162.
 (pdftex.def)             Requested size: 217.42265pt x 139.7752pt.
-<figures/1a_reorder_speedup_kernel.png, id=96, 505.89pt x 325.215pt>
+<figures/1a_reorder_speedup_kernel.png, id=100, 505.89pt x 325.215pt>
 File: figures/1a_reorder_speedup_kernel.png Graphic file (type png)
 <use figures/1a_reorder_speedup_kernel.png>
-Package pdftex.def Info: figures/1a_reorder_speedup_kernel.png  used on input line 161.
+Package pdftex.def Info: figures/1a_reorder_speedup_kernel.png  used on input line 168.
 (pdftex.def)             Requested size: 217.42265pt x 139.7752pt.
  [2 <./figures/1a_reorder_speedup_matrix.png> <./figures/1a_reorder_speedup_kernel.png>]
-<figures/1a_unroll_speedup_matrix.png, id=107, 505.89pt x 325.215pt>
+<figures/1a_unroll_speedup_matrix.png, id=110, 505.89pt x 325.215pt>
 File: figures/1a_unroll_speedup_matrix.png Graphic file (type png)
 <use figures/1a_unroll_speedup_matrix.png>
-Package pdftex.def Info: figures/1a_unroll_speedup_matrix.png  used on input line 335.
+Package pdftex.def Info: figures/1a_unroll_speedup_matrix.png  used on input line 342.
 (pdftex.def)             Requested size: 217.42265pt x 139.7752pt.
-<figures/1a_unroll_speedup_kernel.png, id=108, 505.89pt x 325.215pt>
+<figures/1a_unroll_speedup_kernel.png, id=111, 505.89pt x 325.215pt>
 File: figures/1a_unroll_speedup_kernel.png Graphic file (type png)
 <use figures/1a_unroll_speedup_kernel.png>
-Package pdftex.def Info: figures/1a_unroll_speedup_kernel.png  used on input line 341.
+Package pdftex.def Info: figures/1a_unroll_speedup_kernel.png  used on input line 348.
 (pdftex.def)             Requested size: 217.42265pt x 139.7752pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/1a_instructions_reduction.png, id=109, 505.89pt x 361.35pt>
+<figures/1a_instructions_reduction.png, id=112, 505.89pt x 361.35pt>
 File: figures/1a_instructions_reduction.png Graphic file (type png)
 <use figures/1a_instructions_reduction.png>
-Package pdftex.def Info: figures/1a_instructions_reduction.png  used on input line 351.
+Package pdftex.def Info: figures/1a_instructions_reduction.png  used on input line 358.
 (pdftex.def)             Requested size: 217.42265pt x 155.30579pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -404,25 +405,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [3] [4 <./figures/1a_unroll_speedup_matrix.png> <./figures/1a_unroll_speedup_kernel.png> <./figures/1a_instructions_reduction.png>] [5
 
 ] [6]
-<figures/1b_speedup_matrix_k3.png, id=132, 542.025pt x 346.896pt>
+<figures/1b_speedup_matrix_k3.png, id=136, 542.025pt x 346.896pt>
 File: figures/1b_speedup_matrix_k3.png Graphic file (type png)
 <use figures/1b_speedup_matrix_k3.png>
-Package pdftex.def Info: figures/1b_speedup_matrix_k3.png  used on input line 595.
+Package pdftex.def Info: figures/1b_speedup_matrix_k3.png  used on input line 602.
 (pdftex.def)             Requested size: 217.42265pt x 139.14763pt.
-<figures/1b_speedup_matrix_k9.png, id=133, 542.025pt x 346.896pt>
+<figures/1b_speedup_matrix_k9.png, id=137, 542.025pt x 346.896pt>
 File: figures/1b_speedup_matrix_k9.png Graphic file (type png)
 <use figures/1b_speedup_matrix_k9.png>
-Package pdftex.def Info: figures/1b_speedup_matrix_k9.png  used on input line 601.
+Package pdftex.def Info: figures/1b_speedup_matrix_k9.png  used on input line 608.
 (pdftex.def)             Requested size: 217.42265pt x 139.14763pt.
-<figures/1b_l1_miss_rate_comparison.png, id=134, 578.16pt x 346.896pt>
+<figures/1b_l1_miss_rate_comparison.png, id=138, 578.16pt x 346.896pt>
 File: figures/1b_l1_miss_rate_comparison.png Graphic file (type png)
 <use figures/1b_l1_miss_rate_comparison.png>
-Package pdftex.def Info: figures/1b_l1_miss_rate_comparison.png  used on input line 612.
+Package pdftex.def Info: figures/1b_l1_miss_rate_comparison.png  used on input line 619.
 (pdftex.def)             Requested size: 217.42265pt x 130.4509pt.
-<figures/1b_l1_mpki_matrix_k3.png, id=135, 542.025pt x 346.896pt>
+<figures/1b_l1_mpki_matrix_k3.png, id=139, 542.025pt x 346.896pt>
 File: figures/1b_l1_mpki_matrix_k3.png Graphic file (type png)
 <use figures/1b_l1_mpki_matrix_k3.png>
-Package pdftex.def Info: figures/1b_l1_mpki_matrix_k3.png  used on input line 618.
+Package pdftex.def Info: figures/1b_l1_mpki_matrix_k3.png  used on input line 625.
 (pdftex.def)             Requested size: 217.42265pt x 139.14763pt.
 
 
@@ -430,64 +431,62 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [7 <./figures/1b_speedup_matrix_k3.png> <./figures/1b_speedup_matrix_k9.png>]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 678.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 685.
  [8 <./figures/1b_l1_miss_rate_comparison.png> <./figures/1b_l1_mpki_matrix_k3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 692--694
+Underfull \hbox (badness 10000) in paragraph at lines 699--701
 
  []
 
 [9]
-<figures/1c_simd_speedup.png, id=158, 928.9104pt x 370.2633pt>
+<figures/1c_simd_speedup.png, id=162, 928.9104pt x 370.2633pt>
 File: figures/1c_simd_speedup.png Graphic file (type png)
 <use figures/1c_simd_speedup.png>
-Package pdftex.def Info: figures/1c_simd_speedup.png  used on input line 764.
+Package pdftex.def Info: figures/1c_simd_speedup.png  used on input line 771.
 (pdftex.def)             Requested size: 452.9679pt x 180.54924pt.
-<figures/1c_simd_instructions.png, id=159, 929.3922pt x 370.2633pt>
+<figures/1c_simd_instructions.png, id=163, 929.3922pt x 370.2633pt>
 File: figures/1c_simd_instructions.png Graphic file (type png)
 <use figures/1c_simd_instructions.png>
-Package pdftex.def Info: figures/1c_simd_instructions.png  used on input line 773.
+Package pdftex.def Info: figures/1c_simd_instructions.png  used on input line 780.
 (pdftex.def)             Requested size: 362.37569pt x 144.3682pt.
  [10 <./figures/1c_simd_speedup.png> <./figures/1c_simd_instructions.png>] [11]
-Overfull \hbox (27.3868pt too wide) in paragraph at lines 867--868
+Overfull \hbox (27.3868pt too wide) in paragraph at lines 874--875
 []\OT1/cmr/bx/n/10.95 Loop-Invariant Pointer Hoist-ing\OT1/cmr/m/n/10.95 : In-vari-ant ker-nel weight broad-casts ([]\OT1/cmtt/m/n/10.95 mm256[]set1[]ps\OT1/cmr/m/n/10.95 )
  []
 
-[12] [13]
-<figures/1d_speedup_matrix_k3.png, id=192, 495.2904pt x 365.4453pt>
+[12] [13] [14]
+<figures/1d_speedup_matrix_k3.png, id=200, 495.2904pt x 365.4453pt>
 File: figures/1d_speedup_matrix_k3.png Graphic file (type png)
 <use figures/1d_speedup_matrix_k3.png>
-Package pdftex.def Info: figures/1d_speedup_matrix_k3.png  used on input line 1045.
+Package pdftex.def Info: figures/1d_speedup_matrix_k3.png  used on input line 1052.
 (pdftex.def)             Requested size: 217.42265pt x 160.4228pt.
-<figures/1d_speedup_kernel_n2048.png, id=193, 495.2904pt x 365.4453pt>
+<figures/1d_speedup_kernel_n2048.png, id=201, 495.2904pt x 365.4453pt>
 File: figures/1d_speedup_kernel_n2048.png Graphic file (type png)
 <use figures/1d_speedup_kernel_n2048.png>
-Package pdftex.def Info: figures/1d_speedup_kernel_n2048.png  used on input line 1051.
+Package pdftex.def Info: figures/1d_speedup_kernel_n2048.png  used on input line 1058.
 (pdftex.def)             Requested size: 217.42265pt x 160.4228pt.
+ [15
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14] [15 <./figures/1d_speedup_matrix_k3.png> <./figures/1d_speedup_kernel_n2048.png>] (./report.aux)
+ <./figures/1d_speedup_matrix_k3.png> <./figures/1d_speedup_kernel_n2048.png>] (./report.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 1851A36A3F4891E8C45653EDF851FEFA;5474.
+(rerunfilecheck)             Checksum: 62CFBE3204619CAF110BC339F768914A;5604.
  ) 
 Here is how much of TeX's memory you used:
- 10719 strings out of 469089
- 166599 string characters out of 5458209
- 691300 words of memory out of 5000000
- 39616 multiletter control sequences out of 15000+600000
- 638723 words of font info for 83 fonts, out of 8000000 for 9000
+ 10727 strings out of 469089
+ 166694 string characters out of 5458209
+ 691468 words of memory out of 5000000
+ 39622 multiletter control sequences out of 15000+600000
+ 639970 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 74i,8n,79p,608b,628s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,10n,79p,608b,628s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/me_dheerajkumar/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/me_dheerajkumar/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (15 pages, 2339008 bytes).
+Output written on report.pdf (15 pages, 2340964 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 289 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
